@@ -1,0 +1,43 @@
+/* all app scss styles here */
+
+@import "compass/css3";
+@import "compass/utilities";
+
+// global variables & styles
+
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+$type--primary: "Lato", sans-serif;
+
+// We use these to control header font sizes
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
+
+body {
+  font-family: $type--primary;
+}
+
+.main {
+  padding-top: 18%;
+}
+
+// reset style of textarea
+.typearea {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  height: $h4-font-size*1.6*3;
+
+  font-size: $h4-font-size;
+  line-height: 1.6;
+  letter-spacing: 1px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
