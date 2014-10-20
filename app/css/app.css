@@ -3941,6 +3941,8 @@ th.hide-for-touch {
 /* all app scss styles here */
 body {
   font-family: "Lato", sans-serif;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .main {
@@ -3969,4 +3971,6 @@ body {
 .character {
   position: absolute;
   z-index: -1;
+  -webkit-transition: all .5s ease-in-out;
+  font-size: 600px;
 }

@@ -7,4 +7,6 @@
 .character {
   position: absolute;
   z-index: -1;
+  -webkit-transition: all .5s ease-in-out;
+  font-size: 600px;
 }
