@@ -21,5 +21,6 @@ var app = (function(document, $) {
 
 	'use strict';
 	app.init();
+	baloon.init();
 
 })();

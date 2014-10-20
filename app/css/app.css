@@ -3960,3 +3960,13 @@ body {
   box-shadow: none;
   border: 1px solid #ccc;
 }
+
+.typearea {
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.character {
+  position: absolute;
+  z-index: -1;
+}
