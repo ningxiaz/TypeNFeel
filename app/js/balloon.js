@@ -1,38 +1,41 @@
 var baloon = (function () {
-  var init = function() {
+  var init = function () {
     $('.typearea').keypress(function(e) {
       console.log(String.fromCharCode(e.which));
       generate(String.fromCharCode(e.which));
     });
   };
 
-  var generate = function(character) {
+  var generate = function (character) {
     if(character === ' ') {
       return;
     }
 
     var color = randomColor({
-      luminosity: 'bright',
+      luminosity: 'light',
       format: 'hex'
     });
 
     var style = {
-      'left': '50%',
-      'right': '50%',
-      'transform': 'scale(40)',
+      'left': getRandom(0, 100) + '%',
+      'top': getRandom(0, 100) + '%',
+      'transform': 'scale(' + getRandom(1, 60) + ')',
       'color': color,
-      'opacity': 0.6
+      'opacity': getRandom(0.1, 0.95)
     };
 
     $('<div>', {
       'class': 'character'
     }).css(style).text(character).appendTo($('body'));
+  };
 
-
+  var getRandom = function (min, max) {
+    return Math.random() * (max - min) + min;
   };
 
   return {
-    init: init
+    init: init,
+    getRandom: getRandom
   };
 
 }());
