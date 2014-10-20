@@ -11,14 +11,14 @@ var baloon = (function () {
     }
 
     var color = randomColor({
-      luminosity: 'light',
+      hue: 'monochrome',
       format: 'hex'
     });
 
     var style = {
-      'left': getRandom(0, 100) + '%',
-      'top': getRandom(0, 100) + '%',
-      'transform': 'scale(0.1) translateX(-300px) translateY(-600px)',
+      'left': 'calc(' + getRandom(0, 100)  + '% - 100px)',
+      'top': 'calc(' + getRandom(0, 100)  + '% - 500px)',
+      'transform': 'scale(0.1)',
       'color': color,
       'opacity': getRandom(0.1, 0.95)
     };
@@ -28,7 +28,7 @@ var baloon = (function () {
     }).css(style).text(character).appendTo($('body'));
 
     setTimeout(function () {
-      newCharacter.css('transform', 'scale(' + getRandom(0.1, 1) + ') translateX(-300px) translateY(-600px)');
+      newCharacter.css('transform', 'scale(' + getRandom(0.1, 1) + ')');
     }, 50);
 
     

@@ -3943,6 +3943,7 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0, 0, 0);
+  overflow: hidden;
 }
 
 .main {
