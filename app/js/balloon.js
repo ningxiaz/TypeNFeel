@@ -1,7 +1,6 @@
 var baloon = (function () {
   var init = function () {
     $('.typearea').keypress(function(e) {
-      console.log(String.fromCharCode(e.which));
       generate(String.fromCharCode(e.which));
     });
   };
@@ -19,7 +18,7 @@ var baloon = (function () {
     var style = {
       'left': getRandom(0, 100) + '%',
       'top': getRandom(0, 100) + '%',
-      'transform': 'scale(' + getRandom(1, 60) + ')',
+      'transform': 'scale(' + getRandom(1, 40) + ')',
       'color': color,
       'opacity': getRandom(0.1, 0.95)
     };
